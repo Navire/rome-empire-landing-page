@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-size: 8px;
+  background-color: #FFF5E6;
+  font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-rows: 100vh 100vh; }
+  @media only screen and (min-width: 56.25em) {
+    body {
+      font-size: 12px; } }
+  @media only screen and (min-width: 75em) {
+    body {
+      font-size: 16px; } }
+
+@keyframes upToDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20rem); }
+  80% {
+    transform: translateY(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes appearFromCenter {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+.header {
+  background-image: linear-gradient(rgba(127, 33, 34, 0.8), rgba(127, 33, 34, 0.8)), url(../img/background-phone.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media only screen and (min-width: 56.25em) {
+    .header {
+      background-image: linear-gradient(rgba(127, 33, 34, 0.8), rgba(127, 33, 34, 0.8)), url(../img/map_117AD.png); } }
+  .header__title-box {
+    width: 100%;
+    text-align: center; }
+
+.heading {
+  overflow: hidden; }
+  .heading--main {
+    display: block;
+    color: #FACD1E;
+    font-size: 5rem;
+    text-transform: uppercase;
+    animation: upToDown 1s ease-out; }
+  .heading--sub {
+    display: block;
+    color: #E5DBB7;
+    font-size: 2rem;
+    text-transform: capitalize;
+    animation: rightToLeft 1s ease-out; }
+  .heading--third {
+    display: block;
+    color: #FFF5E6;
+    font-size: 3rem;
+    animation: appearFromCenter 1s ease-out;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center; }
+    .heading--third::before, .heading--third::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor; }

@@ -1,0 +1,41 @@
+@keyframes upToDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes appearFromCenter {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
