@@ -1,18 +1,17 @@
 .heading-primary{
+    cursor: default;
     color: transparent;
-    background-image: linear-gradient(to right, $color-primary-dark, $color-purple);
     -webkit-background-clip: text;
-
     font-family: $font-primary;
-    
-    text-transform: uppercase;   
+    text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 700;
     transition: all .2s;
-    
+    text-align: center;
+
     &:hover{
         transform: scale(1.1);
-        font-weight: 900;    
+        font-weight: 900;
         text-shadow: -1rem 1rem 2rem rgba($color-black, .3);
-    }    
+    }
 }

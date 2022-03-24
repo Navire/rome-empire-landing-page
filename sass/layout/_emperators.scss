@@ -9,6 +9,11 @@
         grid-template-columns: [full-start] repeat(auto-fit, minmax(15rem, 1fr)) [full-end];
         grid-gap: 3rem;
         grid-template-rows: 8rem min-content;
+        margin-bottom: 5%;
+    }
+
+    h2{
+        background-image: linear-gradient(to right, $color-primary-dark, $color-purple);
     }
 }
 
@@ -35,7 +40,7 @@
     align-items: center;
 
     &:hover{
-        cursor: pointer;
+        cursor: default;
         background-color: $color-purple;
     }
 

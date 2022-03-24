@@ -13,11 +13,11 @@ body {
   background-color: #FFF5E6;
   font-family: "Lato", sans-serif;
   display: grid;
-  grid-template-rows: 100vh auto auto; }
+  grid-template-rows: 100vh auto auto auto; }
   @media only screen and (min-width: 56.25em) {
     body {
       font-size: 12px;
-      grid-template-rows: 100vh auto 60vh; } }
+      grid-template-rows: 100vh auto auto auto; } }
   @media only screen and (min-width: 75em) {
     body {
       font-size: 16px; } }
@@ -49,14 +49,15 @@ body {
     transform: scale(1); } }
 
 .heading-primary {
+  cursor: default;
   color: transparent;
-  background-image: linear-gradient(to right, #7F2122, #800080);
   -webkit-background-clip: text;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 700;
-  transition: all .2s; }
+  transition: all .2s;
+  text-align: center; }
   .heading-primary:hover {
     transform: scale(1.1);
     font-weight: 900;
@@ -113,7 +114,10 @@ body {
     display: grid;
     grid-template-columns: [full-start] repeat(auto-fit, minmax(15rem, 1fr)) [full-end];
     grid-gap: 3rem;
-    grid-template-rows: 8rem min-content; }
+    grid-template-rows: 8rem min-content;
+    margin-bottom: 5%; }
+  .emperators h2 {
+    background-image: linear-gradient(to right, #7F2122, #800080); }
 
 .heading-grid {
   grid-column: full-start / full-end;
@@ -134,7 +138,7 @@ body {
   flex-direction: column;
   align-items: center; }
   .card-shield:hover {
-    cursor: pointer;
+    cursor: default;
     background-color: #800080; }
   .card-shield__image {
     width: 7rem;
@@ -173,7 +177,6 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
   color: #fff;
   background-color: #777777;
   width: 100%; }
@@ -220,7 +223,8 @@ body {
     align-self: center;
     width: 30%;
     border: 1px solid currentColor;
-    padding: 2%; }
+    padding: 2%;
+    margin-bottom: 5%; }
     @media only screen and (max-width: 37.5em) {
       .footer__contact {
         font-size: 1rem;
@@ -245,3 +249,71 @@ body {
       width: 25%;
       display: block;
       background-color: currentColor; }
+
+.army {
+  display: flex;
+  padding: 5% 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #7F2122; }
+  .army__rowCard {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
+  .army h2 {
+    background-image: linear-gradient(to right, #FACD1E, #FACD1E); }
+
+.soldierCard {
+  margin: 5% 0;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  width: 24%;
+  height: 30rem;
+  position: relative; }
+  .soldierCard__side {
+    width: 100%;
+    height: 30rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; }
+    .soldierCard__side--front {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .soldierCard__side--back {
+      background-color: #FFF5E6;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5%; }
+      .soldierCard__side--back h3 {
+        color: #800080;
+        font-size: 2rem; }
+  .soldierCard:hover .soldierCard__side--front {
+    transform: rotateY(180deg); }
+  .soldierCard:hover .soldierCard__side--back {
+    transform: rotateY(0deg); }
+  .soldierCard dl {
+    margin: 5% 0;
+    text-align: center; }
+    .soldierCard dl dd {
+      margin: 5% 0;
+      line-height: 2.5;
+      color: color-grey-lightest;
+      border-bottom: 1px solid black; }
+
+.soldierBg {
+  background-image: url(../img/soldier.jpg); }
+
+.centurioBg {
+  background-image: url(../img/centurio.jpg); }
+
+.generalBg {
+  background-image: url(../img/general.jpg); }
+
+.emperorBg {
+  background-image: url(../img/emperor.jpg); }

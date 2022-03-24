@@ -16,11 +16,11 @@ body {
     font-family: $font-primary;
 
     display: grid;
-    grid-template-rows: 100vh auto auto;
+    grid-template-rows: 100vh auto auto auto;
 
     @include respond(tablet) {
         font-size:  12px;
-        grid-template-rows: 100vh auto 60vh;
+        grid-template-rows: 100vh auto auto auto;
     }
 
     @include respond(desktop) {

@@ -1,0 +1,95 @@
+.army{
+    display: flex;
+    padding: 5% 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary-dark;
+
+    &__rowCard{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    h2{
+        background-image: linear-gradient(to right, $color-secondary, $color-secondary);
+    }
+}
+
+
+.soldierCard{
+    margin: 5% 0;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    width: 24%;
+    height: 30rem;
+    position: relative;
+
+    &__side{
+        width: 100%;
+        height: 30rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+        &--front{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--back{
+            background-color: $color-bege-light;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5%;
+
+            h3{
+                color: $color-purple;
+                font-size: 2rem;
+            }
+
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    dl{
+        margin: 5% 0;
+        text-align: center;
+        dd{
+            margin: 5% 0;
+            line-height: 2.5;
+            color: color-grey-lightest;
+            border-bottom: 1px solid black;
+        }
+    }
+}
+
+.soldierBg{
+    background-image: url(../img/soldier.jpg);
+}
+
+.centurioBg{
+    background-image: url(../img/centurio.jpg);
+}
+
+.generalBg{
+    background-image: url(../img/general.jpg);
+}
+
+.emperorBg{
+    background-image: url(../img/emperor.jpg);
+}
+

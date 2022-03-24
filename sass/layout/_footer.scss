@@ -1,7 +1,6 @@
 .footer {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
     color: $color-white;
     background-color: $color-grey-lightest;
     width: 100%;
@@ -70,6 +69,7 @@
         width: 30%;
         border: 1px solid currentColor;
         padding: 2%;
+        margin-bottom: 5%;
 
         @include respond(maxPhone) {
             font-size: 1rem;
