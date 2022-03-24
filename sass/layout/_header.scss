@@ -1,25 +1,25 @@
-.header {            
+.header {
     background-image: linear-gradient(
-            rgba($color-primary-dark, .8), 
+            rgba($color-primary-dark, .8),
             rgba($color-primary-dark, .8)
-        ), 
+        ),
         url(../img/background-phone.jpg);
-        
+
     @include respond(tablet) {
         background-image: linear-gradient(
-            rgba($color-primary-dark, .8), 
+            rgba($color-primary-dark, .8),
             rgba($color-primary-dark, .8)
-        ), 
+        ),
         url(../img/map_117AD.png);
     }
     background-position: center;
     background-size: cover;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     justify-content: center;
-    
-    &__title-box {        
-        width: 100%;        
+
+    &__title-box {
+        width: 100%;
         text-align: center;
     }
 }
@@ -36,23 +36,24 @@
     }
 
     &--sub {
-        display: block;                
+        display: block;
         color: $color-bege-medium;
         font-size: 2rem;
         text-transform: capitalize;
-        animation: rightToLeft 1s ease-out;            
+        animation: rightToLeft 1s ease-out;
     }
 
     &--third {
         display: block;
         color: $color-bege-light;
         font-size: 3rem;
-        animation: appearFromCenter 1s ease-out;        
-        
-        display: grid;    
+        animation: appearFromCenter 1s ease-out;
+
+        display: grid;
         grid-template-columns: 1fr max-content 1fr;
         grid-column-gap: 1.5rem;
         align-items: center;
+
         &::before,
         &::after {
             content: "";

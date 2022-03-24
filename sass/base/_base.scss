@@ -7,22 +7,23 @@
 }
 
 html {
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-body {    
-    font-size:  8px; 
+body {
+    font-size:  8px;
     background-color: $color-bege-light;
-    font-family: $font-primary; 
+    font-family: $font-primary;
 
     display: grid;
-    grid-template-rows: 100vh 100vh;        
+    grid-template-rows: 100vh auto auto;
 
     @include respond(tablet) {
-        font-size:  12px; 
+        font-size:  12px;
+        grid-template-rows: 100vh auto 60vh;
     }
 
     @include respond(desktop) {
-        font-size:  16px; 
+        font-size:  16px;
     }
 }
